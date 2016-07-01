@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MyGame</title>
+    <style>* { padding: 0; margin: 0; } canvas { display: block; margin: 0 auto; }</style>
+</head>
+
+<!-- onload means that the startclock function will execute as soon as I load the page -->
+<body onload="startclock();">
+
+<!-- here I declared the canvas element and I set a backGround color to it -->
+<canvas id="myCanvas" width="870" height="300" style="background-color:black"></canvas>
+
+<!-- I have an external JavaScript file, and it is after my canvas element, and it needs to be after it.
+That is because all my functions in the javascript file are dealing with an instance of the canvas element.So if I put my script before my canvas element,it won't run cause it won't recognize the canvas -->
+<script src="js/script.js">
+</script>
+<h2 style="color: tomato; text-align:center;">
+		<!-- 
+		The <span> tag is used to group inline-elements in a document.
+		The <span> tag provides no visual change by itself.
+		The <span> tag provides a way to add a hook to a part of a text or a part of a document. -->
+    Your timing is <span id="timeDisplay"></span>
+</body>
+</html>
